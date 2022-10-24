@@ -1,0 +1,19 @@
+﻿@page "/settings"
+@attribute [Authorize(Roles = "Administrator")]
+
+<h1>Ustawienia</h1>
+
+<p>Złożoność hasła:</p>
+<EditForm Model="@Model" OnValidSubmit="Submit">
+
+    <InputCheckbox checked="@Model.First" @bind-Value="Model.First" />
+    <label class="me-2">Co najmniej 8 znaków</label>
+
+
+    <InputCheckbox @bind-Value="Model.Second" />
+    <label class="me-2">Co najmniej jedna wielka litera</label>
+
+    <InputCheckbox @bind-Value="Model.Third" />
+    <label class="me-2">Co najmniej jeden znak specjalny</label>
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</EditForm>

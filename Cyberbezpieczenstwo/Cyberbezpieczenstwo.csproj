@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Cyberbezpieczenstwo-4dca2b26-037d-4881-a740-2d64f027dd02</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Proxies" />
+    <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <None Remove="Data\Models\" />
+    <None Remove="SharedKernel\" />
+    <None Remove="SharedKernel\Interfaces\" />
+    <None Remove="Ardalis.Specification" />
+    <None Remove="SharedKernel\Enums\" />
+    <None Remove="Authentication\" />
+    <None Remove="Data\Interfaces\" />
+    <None Remove="Data\Services\" />
+    <None Remove="API\" />
+    <None Remove="API\Models\" />
+    <None Remove="API\Controllers\" />
+    <None Remove="Data\Specifications\" />
+    <None Remove="Swashbuckle.AspNetCore.SwaggerGen" />
+    <None Remove="Swashbuckle.AspNetCore.Annotations" />
+    <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
+    <None Remove="Autofac" />
+    <None Remove="Autofac.Extensions.DependencyInjection" />
+    <None Remove="Ardalis.ListStartupServices" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <None Remove="Ardalis.Specification.EntityFrameworkCore" />
+    <None Remove="FluentValidation" />
+    <None Remove="Blazored.FluentValidation" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.10" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
+    <PackageReference Include="Ardalis.Specification" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Ardalis.ListStartupServices" Version="1.1.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.10" />
+    <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="6.1.0" />
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Blazored.FluentValidation" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Models\" />
+    <Folder Include="SharedKernel\" />
+    <Folder Include="SharedKernel\Interfaces\" />
+    <Folder Include="SharedKernel\Enums\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="Data\Interfaces\" />
+    <Folder Include="Data\Services\" />
+    <Folder Include="API\" />
+    <Folder Include="API\Models\" />
+    <Folder Include="API\Controllers\" />
+    <Folder Include="Data\Specifications\" />
+  </ItemGroup>
+</Project>

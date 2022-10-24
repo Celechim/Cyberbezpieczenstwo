@@ -1,0 +1,15 @@
+﻿@page "/nowy-uzytkownik"
+@attribute [Authorize(Roles = "Administrator")]
+
+
+    <h1>Dodaj użytkownika</h1>
+
+    <EditForm Model="@newUser" OnValidSubmit="CreateUser">
+        <label>Login:</label>
+        <InputText @bind-Value="@newUser.Login" placeholder="Login" />
+        <label>Hasło:</label>
+        <InputText type="password" @bind-Value="@newUser.Password" placeholder="Password" />
+        <label>Wygaśnięcie hasła:</label>
+        <InputDate @bind-Value="@newUser.ExpirationTime" />
+        <button type="submit" class="btn btn-primary">Dodaj użytkownika</button>
+    </EditForm>

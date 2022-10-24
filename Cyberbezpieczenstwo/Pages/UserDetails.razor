@@ -1,0 +1,52 @@
+﻿@page "/uzytkownik/{Id:int}"
+@using Blazored.FluentValidation
+
+@if (User != null)
+{
+    @if (View == "details")
+    {
+        <h1>@User.Login</h1>
+        @if (authState.User.IsInRole("Administrator"))
+        {
+            <button class="btn btn-secondary" @onclick="Delete">Usuń użytkownika</button>
+            <p>Data wygaśnięcia:</p>
+            <p>@User.ExpirationTime</p>
+        }
+        <button @onclick="ChangeView" class="btn btn-primary">Edytuj</button>
+    }
+    else
+    {
+<EditForm Model="@userToUpdate" OnValidSubmit="Update">
+    <FluentValidationValidator Validator="@(_loginValidator)" DisableAssemblyScanning="@true" />
+    @if (authState.User.IsInRole("Administrator"))
+    {
+        <label>Login</label>
+        <InputText class="form-control" @bind-Value="@userToUpdate.Login" placeholder="@User.Login" />
+    }
+    <label>Stare hasło</label>
+    <InputText type="password" class="form-control" @bind-Value="@passwordToConfirm" placeholder="Old password" />
+    @if (showInvalidPasswords != false)
+    {
+        <p style="color: red;">Niepoprawne hasło</p>
+    }
+    <label>Nowe hasło</label>
+    <InputText type="password" class="form-control" @bind-Value="@userToUpdate.Password" placeholder="Password" />
+    @if (showPasswordAlreadyUsed != false)
+    {
+        <p style="color: red;">Nie możesz ponownie użyć tego hasła</p>
+    }
+    <ValidationSummary />
+    @if (authState.User.IsInRole("Administrator"))
+    {
+        <label>Ważność hasła</label>
+        <InputNumber class="form-control" @bind-Value="@passwordExpiresIn" placeholder="@passwordExpiresIn" /><p>dni</p>
+        <label>Zablokuj użytkownika</label>
+        <InputCheckbox @bind-Value="@userToUpdate.IsBlocked"/>
+    }
+        <br/>
+    <button class="btn btn-primary" type="submit">Aktualizuj</button>
+    <br/>
+</EditForm>
+        <button @onclick="ChangeView" class="btn btn-primary">Wróć</button>
+    }
+}

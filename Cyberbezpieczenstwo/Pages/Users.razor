@@ -1,0 +1,42 @@
+﻿@page "/uzytkownicy"
+@attribute [Authorize(Roles = "Administrator")]
+
+<AuthorizeView Roles="Administrator">
+    <PageTitle>Użytkownicy</PageTitle>
+
+    <h1>Użytkownicy</h1>
+
+    @if (UserList != null)
+    {
+        <table class="border">
+            <thead>
+                <tr>
+                    <th class="pe-5">
+                        Login
+                    </th>
+                    <th>
+                        Hasło wygasa:
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in UserList.OrderBy(x => x.Role))
+                {
+                    var path = "/uzytkownik/" + user.Id;
+                    <tr class="border pt-1 pb-1">
+                        <td>
+                            <a @onclick="() => { navManager.NavigateTo(path); }">@user.Login</a>
+                        </td>
+                        <td>
+                            @user.ExpirationTime
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <button @onclick="Redirect" class="btn btn-primary">Dodaj użytkownika</button>
+
+
+</AuthorizeView>

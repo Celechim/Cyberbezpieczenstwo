@@ -1,0 +1,16 @@
+﻿@using Authentication
+
+<AuthorizeView>
+    <Authorized>
+        @if (User != null)
+        { 
+            <a href="/uzytkownik/@User.Id">Hello, @context.User.Identity?.Name!</a>
+        }
+        <button class="nav-link btn btn-link" @onclick="Logout">Log out</button>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Identity/Account/Register">Register</a>
+        <a href="Identity/Account/Login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
+
