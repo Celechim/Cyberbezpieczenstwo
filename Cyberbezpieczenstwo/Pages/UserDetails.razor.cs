@@ -37,7 +37,8 @@ public partial class UserDetails
 		User = await userController.GetById(Id);
 		userToUpdate = new UserDTO();
 		userToUpdate.Login = User.Login;
-		passwordExpiresIn = (User.ExpirationTime.Value.Date - DateTime.Now.Date).Days;
+		if (User.Role != 0)
+			passwordExpiresIn = (User.ExpirationTime.Value.Date - DateTime.Now.Date).Days;
 		if (User.Role != 0)
 			passwordExpiresIn = (User.ExpirationTime - DateTime.Now).Value.Days;
 	}

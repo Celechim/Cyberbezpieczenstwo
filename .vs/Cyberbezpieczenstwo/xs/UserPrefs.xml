@@ -1,27 +1,21 @@
 ﻿<Properties StartupConfiguration="{47202E10-FA5D-4507-954D-3EB70A94B7F4}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Cyberbezpieczenstwo PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cyberbezpieczenstwo/Shared/HashProvider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cyberbezpieczenstwo/Data/Models/User.cs">
     <Files>
-      <File FileName="Cyberbezpieczenstwo/Data/ApplicationDbContext.cs" Line="44" Column="128" />
+      <File FileName="Cyberbezpieczenstwo/Data/ApplicationDbContext.cs" />
       <File FileName="Cyberbezpieczenstwo/SharedKernel/EntityBase.cs" />
-      <File FileName="Cyberbezpieczenstwo/SharedKernel/Interfaces/IAggregateRoot.cs" Line="6" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/SharedKernel/Interfaces/IAggregateRoot.cs" />
       <File FileName="Cyberbezpieczenstwo/SharedKernel/Interfaces/IRepository.cs" />
-      <File FileName="Cyberbezpieczenstwo/SharedKernel/Enums/UserRole.cs" Line="1" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/SharedKernel/Enums/UserRole.cs" />
       <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221013134542_CustomUserCreate.cs" />
       <File FileName="Cyberbezpieczenstwo/Authentication/AuthStateProvider.cs" Line="1" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Shared/MainLayout.razor" Line="1" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/Shared/MainLayout.razor" />
       <File FileName="Cyberbezpieczenstwo/Shared/LoginDisplay.razor" />
       <File FileName="Cyberbezpieczenstwo/App.razor" />
-      <File FileName="Cyberbezpieczenstwo/Shared/MainLayout.razor.css" Line="1" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/Shared/MainLayout.razor.css" />
       <File FileName="Cyberbezpieczenstwo/Shared/LoginRedirect.razor" />
-      <File FileName="Cyberbezpieczenstwo/Pages/Login.razor" Line="41" Column="37" />
-      <File FileName="Cyberbezpieczenstwo/Pages/Login.razor.cs" Line="49" Column="103" />
+      <File FileName="Cyberbezpieczenstwo/Pages/Login.razor" Line="34" Column="41" />
+      <File FileName="Cyberbezpieczenstwo/Pages/Login.razor.cs" Line="108" Column="1" />
       <File FileName="Cyberbezpieczenstwo/Data/Interfaces/IUserService.cs" />
       <File FileName="Cyberbezpieczenstwo/Data/Services/UserService.cs" />
       <File FileName="Cyberbezpieczenstwo/Pages/_Host.cshtml" />
@@ -29,36 +23,35 @@
       <File FileName="Cyberbezpieczenstwo/Data/WeatherForecastService.cs" />
       <File FileName="Cyberbezpieczenstwo/API/Models/UserDTO.cs" />
       <File FileName="Cyberbezpieczenstwo/API/Controllers/BaseApiController.cs" />
-      <File FileName="Cyberbezpieczenstwo/API/Controllers/UserController.cs" Line="52" Column="20" />
+      <File FileName="Cyberbezpieczenstwo/API/Controllers/UserController.cs" />
       <File FileName="Cyberbezpieczenstwo/Data/Specifications/UserByLogin.cs" />
       <File FileName="Cyberbezpieczenstwo/SharedKernel/EfRepository.cs" />
       <File FileName="Cyberbezpieczenstwo/SharedKernel/DefaultInfrastructureModule.cs" />
       <File FileName="Cyberbezpieczenstwo/SharedKernel/Response.cs" />
-      <File FileName="Cyberbezpieczenstwo/Data/Specifications/UserById.cs" Line="1" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Shared/NavMenu.razor" Line="26" Column="88" />
-      <File FileName="Cyberbezpieczenstwo/Pages/Users.razor" Line="2" Column="48" />
-      <File FileName="Cyberbezpieczenstwo/Pages/Users.razor.cs" />
-      <File FileName="Cyberbezpieczenstwo/Pages/NewUser.razor" Line="2" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Pages/NewUser.razor.cs" Line="1" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Pages/UserDetails.razor" Line="2" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Pages/UserDetails.razor.cs" Line="34" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/Data/Specifications/UserById.cs" />
+      <File FileName="Cyberbezpieczenstwo/Shared/NavMenu.razor" />
+      <File FileName="Cyberbezpieczenstwo/Pages/Users.razor" />
+      <File FileName="Cyberbezpieczenstwo/Pages/Users.razor.cs" Line="1" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/Pages/NewUser.razor" />
+      <File FileName="Cyberbezpieczenstwo/Pages/NewUser.razor.cs" />
+      <File FileName="Cyberbezpieczenstwo/Pages/UserDetails.razor" />
+      <File FileName="Cyberbezpieczenstwo/Pages/UserDetails.razor.cs" />
       <File FileName="Cyberbezpieczenstwo/Shared/LoginDisplay.razor.cs" />
       <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221019092506_newUserProp.cs" />
-      <File FileName="Cyberbezpieczenstwo/Shared/LoginValidator.cs" Line="7" Column="1" />
+      <File FileName="Cyberbezpieczenstwo/Shared/LoginValidator.cs" Line="1" Column="1" />
       <File FileName="Cyberbezpieczenstwo/API/Models/UsedPasswordDTO.cs" />
       <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221019102733_usedPasswords.cs" />
       <File FileName="Cyberbezpieczenstwo/Shared/HashProvider.cs" Line="1" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Data/Models/PasswordLimitations.cs" Line="17" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/Data/Seeder.cs" Line="15" Column="16" />
-      <File FileName="Cyberbezpieczenstwo/Program.cs" Line="44" Column="63" />
-      <File FileName="Cyberbezpieczenstwo/StartupSetup.cs" Line="10" Column="63" />
-      <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221020092618_passwordLimitations.cs" Line="12" Column="11" />
-      <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221020093400_seedSomeData.cs" Line="11" Column="1" />
-      <File FileName="Cyberbezpieczenstwo/API/Controllers/PasswordLimitationController.cs" Line="30" Column="3" />
-      <File FileName="Cyberbezpieczenstwo/API/Models/PasswordLimitationDTO.cs" Line="12" Column="2" />
-      <File FileName="Cyberbezpieczenstwo/Data/Specifications/PasswordLimitationById.cs" Line="9" Column="39" />
-      <File FileName="Cyberbezpieczenstwo/Pages/Security.razor" Line="4" Column="20" />
-      <File FileName="Cyberbezpieczenstwo/Pages/Security.razor.cs" Line="39" Column="49" />
+      <File FileName="Cyberbezpieczenstwo/Data/Seeder.cs" />
+      <File FileName="Cyberbezpieczenstwo/Program.cs" />
+      <File FileName="Cyberbezpieczenstwo/StartupSetup.cs" />
+      <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221020092618_passwordLimitations.cs" />
+      <File FileName="Cyberbezpieczenstwo/Data/Migrations/20221020093400_seedSomeData.cs" />
+      <File FileName="Cyberbezpieczenstwo/API/Controllers/PasswordLimitationController.cs" />
+      <File FileName="Cyberbezpieczenstwo/API/Models/PasswordLimitationDTO.cs" />
+      <File FileName="Cyberbezpieczenstwo/Data/Specifications/PasswordLimitationById.cs" />
+      <File FileName="Cyberbezpieczenstwo/Pages/Security.razor" />
+      <File FileName="Cyberbezpieczenstwo/Pages/Security.razor.cs" />
       <File FileName="Cyberbezpieczenstwo/Data/Models/User.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -74,7 +67,9 @@
               <Node name="Data" expanded="True">
                 <Node name="Interfaces" expanded="True" />
                 <Node name="Migrations" expanded="True" />
-                <Node name="Models" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="User.cs" selected="True" />
+                </Node>
                 <Node name="Specifications" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
@@ -85,7 +80,6 @@
                 <Node name="Users.razor" expanded="True" />
               </Node>
               <Node name="Shared" expanded="True">
-                <Node name="HashProvider.cs" selected="True" />
                 <Node name="MainLayout.razor" expanded="True" />
               </Node>
               <Node name="SharedKernel" expanded="True">
@@ -98,4 +92,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Cyberbezpieczenstwo PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

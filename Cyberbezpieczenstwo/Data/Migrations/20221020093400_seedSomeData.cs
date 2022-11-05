@@ -11,7 +11,7 @@ namespace Cyberbezpieczenstwo.Data.Migrations
             migrationBuilder.InsertData(
                 table: "CustomUsers",
                 columns: new[] { "Id", "ExpirationTime", "IsBlocked", "Login", "Password", "Role" },
-                values: new object[] { 1, null, false, "ADMIN", "password", 0 });
+                values: new object[] { 1, null, false, "ADMIN", "AKCR1THZKROiOzsL/LhA4tIrT/+uRESeOtapnWAtMedABbbYt/WGZDbFtUXX7IHfxg==", 0 });
 
             migrationBuilder.InsertData(
                 table: "PasswordLimitations",

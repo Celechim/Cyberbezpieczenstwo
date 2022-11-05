@@ -8,9 +8,12 @@
         <h1>@User.Login</h1>
         @if (authState.User.IsInRole("Administrator"))
         {
-            <button class="btn btn-secondary" @onclick="Delete">Usuń użytkownika</button>
-            <p>Data wygaśnięcia:</p>
-            <p>@User.ExpirationTime</p>
+            @if (User.Role != 0)
+            {
+                <button class="btn btn-secondary" @onclick="Delete">Usuń użytkownika</button>
+                <p>Data wygaśnięcia:</p>
+                <p>@User.ExpirationTime</p>
+            }
         }
         <button @onclick="ChangeView" class="btn btn-primary">Edytuj</button>
     }
@@ -20,8 +23,11 @@
     <FluentValidationValidator Validator="@(_loginValidator)" DisableAssemblyScanning="@true" />
     @if (authState.User.IsInRole("Administrator"))
     {
-        <label>Login</label>
-        <InputText class="form-control" @bind-Value="@userToUpdate.Login" placeholder="@User.Login" />
+        @if (User.Role != 0)
+        { 
+            <label>Login</label>
+            <InputText class="form-control" @bind-Value="@userToUpdate.Login" placeholder="@User.Login" />
+        }
     }
     <label>Stare hasło</label>
     <InputText type="password" class="form-control" @bind-Value="@passwordToConfirm" placeholder="Old password" />
@@ -38,10 +44,13 @@
     <ValidationSummary />
     @if (authState.User.IsInRole("Administrator"))
     {
-        <label>Ważność hasła</label>
-        <InputNumber class="form-control" @bind-Value="@passwordExpiresIn" placeholder="@passwordExpiresIn" /><p>dni</p>
-        <label>Zablokuj użytkownika</label>
-        <InputCheckbox @bind-Value="@userToUpdate.IsBlocked"/>
+        @if (User.Role != 0)
+        { 
+            <label>Ważność hasła</label>
+            <InputNumber class="form-control" @bind-Value="@passwordExpiresIn" placeholder="@passwordExpiresIn" /><p>dni</p>
+            <label>Zablokuj użytkownika</label>
+            <InputCheckbox @bind-Value="@userToUpdate.IsBlocked"/>
+        }
     }
         <br/>
     <button class="btn btn-primary" type="submit">Aktualizuj</button>

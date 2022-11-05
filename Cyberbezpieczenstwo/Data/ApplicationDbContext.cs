@@ -41,6 +41,6 @@ public class ApplicationDbContext : DbContext
             new { Id = 3, LimitationName = "Co najmniej 1 znak specjalny", IsActive = false }
             );
         modelBuilder.Entity<User>().HasData(
-            new User() { Id = 1, Login = "ADMIN", Password = "password", Role = 0, ExpirationTime = null, IsBlocked = false });
+            new User() { Id = 1, Login = "ADMIN", Password = "AKCR1THZKROiOzsL/LhA4tIrT/+uRESeOtapnWAtMedABbbYt/WGZDbFtUXX7IHfxg==", Role = 0, ExpirationTime = null, IsBlocked = false });
     }
 }
