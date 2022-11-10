@@ -1,0 +1,48 @@
+﻿@page "/Logs"
+@attribute [Authorize(Roles = "Administrator")]
+
+<PageTitle>Logs</PageTitle>
+
+    <h1>Historia</h1>
+
+@if (LogList != null)
+    {
+        <table class="border">
+            <thead>
+                <tr>
+                    <th class="pe-5">
+                        DATA:
+                    </th>
+                    <th>
+                        LOGIN:
+                    </th>
+                    <th>
+                        OPIS:
+                    </th>
+                    <th>
+                        STATUS:
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var log in LogList.OrderBy(x => x.Date))
+                {
+                    
+                    <tr class="border pt-1 pb-1">
+                        <td>
+                            @log.Date
+                        </td>
+                        <td>
+                            @log.UserName
+                        </td>
+                        <td>
+                            @log.Description
+                        </td>
+                        <td>
+                            @log.Status
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }

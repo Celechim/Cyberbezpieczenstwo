@@ -3,7 +3,7 @@ namespace Cyberbezpieczenstwo.API.Models;
 
 public class UserDTO : CreateUserDTO
 {
-	public UserDTO(int id, string login, string password, int role, DateTime? expirationTime, bool isBlocked, ICollection<UsedPasswordDTO> usedPasswords) : base(login, password, role, expirationTime, isBlocked, usedPasswords)
+	public UserDTO(int id, string login, string password, int role, DateTime? expirationTime, bool isBlocked, ICollection<UsedPasswordDTO> usedPasswords, bool hasOneUsePassword, string? oneUsePassword,int? x) : base(login, password, role, expirationTime, isBlocked, usedPasswords, hasOneUsePassword, oneUsePassword,x)
 	{
 		Id = id;
 	}
@@ -18,7 +18,7 @@ public class UserDTO : CreateUserDTO
 
 public abstract class CreateUserDTO
 {
-	protected CreateUserDTO(string login, string password, int role, DateTime? expirationTime, bool isBlocked, ICollection<UsedPasswordDTO> usedPasswords)
+	protected CreateUserDTO(string login, string password, int role, DateTime? expirationTime, bool isBlocked, ICollection<UsedPasswordDTO> usedPasswords,bool hasOneUsePassword,string? oneUsePassword,int? x)
 	{
 		Login = login;
 		Password = password;
@@ -26,7 +26,11 @@ public abstract class CreateUserDTO
 		ExpirationTime = expirationTime;
 		IsBlocked = isBlocked;
 		UsedPasswords = usedPasswords;
-	}
+		HasOneUsePassword = hasOneUsePassword;
+		OneUsePassword = oneUsePassword;
+		X = x;
+
+    }
 
 	protected CreateUserDTO()
 	{
@@ -39,5 +43,8 @@ public abstract class CreateUserDTO
 	public DateTime? ExpirationTime { get; set; }
 	public bool IsBlocked { get; set; }
 	public ICollection<UsedPasswordDTO> UsedPasswords { get; set; }
+    public bool HasOneUsePassword { get; set; }
+    public string? OneUsePassword { get; set; }
+	public int? X { get; set; }
 }
 

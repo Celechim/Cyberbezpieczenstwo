@@ -41,7 +41,9 @@ builder.Services.AddAuthenticationCore();
 
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddSingleton<UserController>();
+builder.Services.AddSingleton<LogHistoryController>();
 builder.Services.AddSingleton<PasswordLimitationController>();
+builder.Services.AddSingleton<SecuritySettingsController>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 
 builder.Services.Configure<ServiceConfig>(config =>

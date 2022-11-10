@@ -38,8 +38,11 @@ public class UserController : BaseApiController
 						id: usedPassword.Id,
 						user: new UserDTO(),
 						usedPassword: usedPassword.Password
-					)).ToList()
-			));
+					)).ToList(),
+                hasOneUsePassword:user.HasOneUsePassword,
+				oneUsePassword:user.OneUsePassword,
+                x: user.X
+            ));
 		return userDTOs;
 	}
 
@@ -66,13 +69,16 @@ public class UserController : BaseApiController
                     id: usedPassword.Id,
                     user: new UserDTO(),
                     usedPassword: usedPassword.Password
-                )).ToList()
+                )).ToList(),
+            hasOneUsePassword: user.HasOneUsePassword,
+                oneUsePassword: user.OneUsePassword,
+                x: user.X
         );
 
 		return userDTO;
 	}
 
-	[HttpGet("{id}")]
+	[HttpGet("/ById/{id}")]
     public async Task<UserDTO> GetById(int id)
     {
         var userSpec = new UserById(id);
@@ -92,7 +98,10 @@ public class UserController : BaseApiController
                     id: usedPassword.Id,
                     user: new UserDTO(),
                     usedPassword: usedPassword.Password
-                )).ToList()
+                )).ToList(),
+            hasOneUsePassword: user.HasOneUsePassword,
+                oneUsePassword: user.OneUsePassword,
+                x: user.X
         );
 
         return userDTO;
@@ -108,8 +117,11 @@ public class UserController : BaseApiController
 			(UserRole)request.Role,
 			request.ExpirationTime,
 			request.IsBlocked,
-			new List<UsedPassword>()
-		);
+			new List<UsedPassword>(),
+			request.HasOneUsePassword,
+			request.OneUsePassword,
+			request.X
+        );
 
 		var createdUser = await _repository.AddAsync(newUser);
 		createdUser.UsedPasswords.Add(new UsedPassword(createdUser.Id, createdUser.Password));
@@ -129,7 +141,10 @@ public class UserController : BaseApiController
                     id: usedPassword.Id,
                     user: new UserDTO(),
                     usedPassword: usedPassword.Password
-                )).ToList()
+                )).ToList(),
+            request.HasOneUsePassword,
+            request.OneUsePassword,
+			request.X
         );
 
 		return result;
@@ -147,6 +162,10 @@ public class UserController : BaseApiController
 		userToUpdate.Password = request.Password;
 		userToUpdate.ExpirationTime = request.ExpirationTime;
 		userToUpdate.IsBlocked = request.IsBlocked;
+		userToUpdate.HasOneUsePassword = request.HasOneUsePassword;
+		userToUpdate.OneUsePassword = request.OneUsePassword;
+		userToUpdate.X = request.X;
+		userToUpdate.Role = (UserRole)request.Role;
 
 		await _repository.UpdateAsync(userToUpdate);
 		return new UserDTO
@@ -163,7 +182,10 @@ public class UserController : BaseApiController
                     id: usedPassword.Id,
                     user: new UserDTO(),
                     usedPassword: usedPassword.Password
-                )).ToList()
+                )).ToList(),
+            request.HasOneUsePassword,
+            request.OneUsePassword,
+			request.X
         );
 
 	}

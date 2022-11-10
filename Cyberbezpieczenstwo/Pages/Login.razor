@@ -28,7 +28,9 @@
             <div class="mb-3 text-center">
                 <h4>Twoje hasło wymaga zmiany</h4>
             </div>
+             
             <EditForm Model="@UserModel" OnValidSubmit="ChangePassword">
+                
                 <FluentValidationValidator Validator="@(_loginValidator)" DisableAssemblyScanning="@true" />
                 <div class="mb-3">
                     <label>Hasło</label>

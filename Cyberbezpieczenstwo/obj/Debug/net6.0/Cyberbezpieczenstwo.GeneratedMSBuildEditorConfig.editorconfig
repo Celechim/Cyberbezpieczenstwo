@@ -8,85 +8,93 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Cyberbezpieczenstwo
 build_property.RootNamespace = Cyberbezpieczenstwo
-build_property.ProjectDir = /Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/
+build_property.ProjectDir = C:\Users\lenovo\source\repos\Cyberbezpieczenstwo\Cyberbezpieczenstwo\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo
+build_property.MSBuildProjectDirectory = C:\Users\lenovo\source\repos\Cyberbezpieczenstwo\Cyberbezpieczenstwo
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/App.razor]
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4ucmF6b3I=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/NewUser.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTmV3VXNlci5yYXpvcg==
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Logs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9ncy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Security.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VjdXJpdHkucmF6b3I=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/NewUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3VXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/UserDetails.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckRldGFpbHMucmF6b3I=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Security.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VjdXJpdHkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Users.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlcnMucmF6b3I=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/UserDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/BasicLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0Jhc2ljTGF5b3V0LnJhem9y
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/LoginDisplay.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvZ2luRGlzcGxheS5yYXpvcg==
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/BasicLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJhc2ljTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/LoginRedirect.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvZ2luUmVkaXJlY3QucmF6b3I=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/LoginRedirect.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luUmVkaXJlY3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/_Imports.razor]
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-e59t2wy8hl
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bme4hl32aw
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-tdrnxedqg1
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-k7gdxt9thz
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Areas/Identity/Pages/Account/LogOut.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dPdXQuY3NodG1s
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Areas/Identity/Pages/Account/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/EditAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/_Host.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/aleksander/Projects/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0xheW91dC5jc2h0bWw=
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenovo/source/repos/Cyberbezpieczenstwo/Cyberbezpieczenstwo/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

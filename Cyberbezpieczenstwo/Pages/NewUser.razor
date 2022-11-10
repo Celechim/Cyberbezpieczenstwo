@@ -9,6 +9,16 @@
         <InputText @bind-Value="@newUser.Login" placeholder="Login" />
         <label>Hasło:</label>
         <InputText type="password" @bind-Value="@newUser.Password" placeholder="Password" />
+    
+        <label class="me-2">Czy chcesz wygenerowac jednorazowe haslo?</label>
+        <InputCheckbox @bind-Value="newUser.HasOneUsePassword " />
+        <label>Typ:</label>
+        <InputSelect @bind-Value="@newUser.Role">
+            <option selected value="1">User</option>
+            <option value="2">Fullstack</option>
+            <option value="3">Backend</option>
+            <option value="4">DevOps</option>
+        </InputSelect>
         <label>Wygaśnięcie hasła:</label>
         <InputDate @bind-Value="@newUser.ExpirationTime" />
         <button type="submit" class="btn btn-primary">Dodaj użytkownika</button>

@@ -12,7 +12,7 @@ public static class Seeder
 
 		context.SaveChanges();
 
-		if (!context.PasswordLimitations.Where(x => x.LimitationName == "Co najmniej 8 znaków").Any())
+		/*if (!context.PasswordLimitations.Where(x => x.LimitationName == "Co najmniej 8 znaków").Any())
 		{
 			var newLimitation = new PasswordLimitation()
 			{
@@ -21,7 +21,7 @@ public static class Seeder
 			};
 			context.Add(newLimitation);
 			context.SaveChanges();
-		}
+		}*/
 	}
 }
 

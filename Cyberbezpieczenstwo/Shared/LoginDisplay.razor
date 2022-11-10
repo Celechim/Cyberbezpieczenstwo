@@ -4,7 +4,7 @@
     <Authorized>
         @if (User != null)
         { 
-            <a href="/uzytkownik/@User.Id">Hello, @context.User.Identity?.Name!</a>
+            <a href="/uzytkownik/@User.Id">Hello, @context.User.Identity?.Name! , you are @context.User.Claims.ElementAt(1).Value</a>
         }
         <button class="nav-link btn btn-link" @onclick="Logout">Log out</button>
     </Authorized>

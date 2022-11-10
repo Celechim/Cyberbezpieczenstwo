@@ -19,43 +19,62 @@
     }
     else
     {
-<EditForm Model="@userToUpdate" OnValidSubmit="Update">
-    <FluentValidationValidator Validator="@(_loginValidator)" DisableAssemblyScanning="@true" />
-    @if (authState.User.IsInRole("Administrator"))
-    {
-        @if (User.Role != 0)
-        { 
-            <label>Login</label>
-            <InputText class="form-control" @bind-Value="@userToUpdate.Login" placeholder="@User.Login" />
+        <EditForm Model="@userToUpdate" OnValidSubmit="Update">
+        <FluentValidationValidator Validator="@(_loginValidator)" DisableAssemblyScanning="@true" />
+        @if (authState.User.IsInRole("Administrator"))
+        {
+            @if (User.Role != 0)
+            { 
+                <label>Login</label>
+                <InputText class="form-control" @bind-Value="@userToUpdate.Login" placeholder="@User.Login" />
+                <label>Ważność hasła</label>
+                <InputNumber class="form-control" @bind-Value="@passwordExpiresIn" placeholder="@passwordExpiresIn" />
+
+                <p>dni</p>
+                <br />
+                <label>Zablokuj użytkownika</label>
+                <InputCheckbox @bind-Value="@userToUpdate.IsBlocked" />
+                <br />
+                    <label class="me-2">Czy chcesz wygenerowac jednorazowe haslo?</label>
+                    <InputCheckbox @bind-Value="userToUpdate.HasOneUsePassword " />
+                    <br />
+                <label>Nowe hasło</label>
+                <InputText type="password" class="form-control" @bind-Value="@userToUpdate.Password" placeholder="Password" />
+                <br>
+                    <InputSelect @bind-Value="@userToUpdate.Role">
+                        <option selected value="1">User</option>
+                        <option value="2">Fullstack</option>
+                        <option value="3">Backend</option>
+                        <option value="4">DevOps</option>
+                    </InputSelect>
+                <br />
+            
+            }
         }
-    }
-    <label>Stare hasło</label>
-    <InputText type="password" class="form-control" @bind-Value="@passwordToConfirm" placeholder="Old password" />
-    @if (showInvalidPasswords != false)
-    {
-        <p style="color: red;">Niepoprawne hasło</p>
-    }
-    <label>Nowe hasło</label>
-    <InputText type="password" class="form-control" @bind-Value="@userToUpdate.Password" placeholder="Password" />
-    @if (showPasswordAlreadyUsed != false)
-    {
-        <p style="color: red;">Nie możesz ponownie użyć tego hasła</p>
-    }
-    <ValidationSummary />
-    @if (authState.User.IsInRole("Administrator"))
-    {
-        @if (User.Role != 0)
-        { 
-            <label>Ważność hasła</label>
-            <InputNumber class="form-control" @bind-Value="@passwordExpiresIn" placeholder="@passwordExpiresIn" /><p>dni</p>
-            <label>Zablokuj użytkownika</label>
-            <InputCheckbox @bind-Value="@userToUpdate.IsBlocked"/>
+        else
+        {
+            <label>Stare hasło</label>
+            <InputText type="password" class="form-control" @bind-Value="@passwordToConfirm" placeholder="Old password" />
+            @if (showInvalidPasswords != false)
+            {
+                <p style="color: red;">Niepoprawne hasło</p>
+            }
+            <label>Nowe hasło</label>
+            <InputText type="password" class="form-control" @bind-Value="@userToUpdate.Password" placeholder="Password" />
+            @if (showPasswordAlreadyUsed != false)
+            {
+                <p style="color: red;">Nie możesz ponownie użyć tego hasła</p>
+            }
         }
-    }
+        <ValidationSummary />
         <br/>
-    <button class="btn btn-primary" type="submit">Aktualizuj</button>
-    <br/>
-</EditForm>
+        @if (User.Role != 0)
+        {
+            <button class="btn btn-primary" type="submit">Aktualizuj</button>
+        }
+        <br/>
+        </EditForm>
         <button @onclick="ChangeView" class="btn btn-primary">Wróć</button>
     }
+    
 }

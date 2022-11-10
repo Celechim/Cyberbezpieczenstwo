@@ -19,6 +19,8 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<User> CustomUsers => Set<User>();
     public DbSet<PasswordLimitation> PasswordLimitations => Set<PasswordLimitation>();
+    public DbSet<LogHistory> LogHistory => Set<LogHistory>();
+    public DbSet<SecuritySettings> SecuritySettings => Set<SecuritySettings>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

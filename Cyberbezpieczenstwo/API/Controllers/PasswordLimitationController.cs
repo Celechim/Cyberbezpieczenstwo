@@ -25,7 +25,7 @@ public class PasswordLimitationController : BaseApiController
 				id: limitation.Id,
 				limitationName: limitation.LimitationName,
 				isActive: limitation.IsActive
-			)).ToList();
+                )).ToList();
 		return limitationsDTOs;
 	}
 
@@ -39,7 +39,12 @@ public class PasswordLimitationController : BaseApiController
 
 		await _repository.UpdateAsync(limitationToUpdate);
 
-		return new PasswordLimitationDTO(limitationToUpdate.Id, limitationToUpdate.LimitationName, limitationToUpdate.IsActive);
-	}
+		return new PasswordLimitationDTO
+			(
+			limitationToUpdate.Id,
+			limitationToUpdate.LimitationName,
+			limitationToUpdate.IsActive);
+
+    }
 }
 

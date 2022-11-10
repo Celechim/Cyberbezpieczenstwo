@@ -1,5 +1,4 @@
-﻿using System;
-using Cyberbezpieczenstwo.SharedKernel;
+﻿using Cyberbezpieczenstwo.SharedKernel;
 using Cyberbezpieczenstwo.SharedKernel.Enums;
 using Cyberbezpieczenstwo.SharedKernel.Interfaces;
 
@@ -12,9 +11,12 @@ public class User : EntityBase, IAggregateRoot
 	public UserRole Role { get; set; }
 	public DateTime? ExpirationTime { get; set; }
 	public bool IsBlocked { get; set; }
+	public bool HasOneUsePassword { get; set; }
+	public string? OneUsePassword { get; set; }
+	public int? X { get; set; }
 	public virtual ICollection<UsedPassword>? UsedPasswords { get; set; }
 
-	public User(string login, string password, UserRole role, DateTime? expirationTime, bool isBlocked, ICollection<UsedPassword>? usedPasswords)
+	public User(string login, string password, UserRole role, DateTime? expirationTime, bool isBlocked, ICollection<UsedPassword>? usedPasswords,bool hasOneUsePassword,string oneUsePassword,int? x)
 	{
 		Login = login;
 		Password = password;
@@ -22,7 +24,10 @@ public class User : EntityBase, IAggregateRoot
 		ExpirationTime = expirationTime;
 		IsBlocked = isBlocked;
 		UsedPasswords = usedPasswords;
-	}
+		HasOneUsePassword = hasOneUsePassword;
+		OneUsePassword = oneUsePassword;
+		X = x;
+    }
 
 	public User()
 	{

@@ -22,6 +22,32 @@ namespace Cyberbezpieczenstwo.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Cyberbezpieczenstwo.Data.Models.LogHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LogHistory");
+                });
+
             modelBuilder.Entity("Cyberbezpieczenstwo.Data.Models.PasswordLimitation", b =>
                 {
                     b.Property<int>("Id")
@@ -62,6 +88,31 @@ namespace Cyberbezpieczenstwo.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Cyberbezpieczenstwo.Data.Models.SecuritySettings", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsSetAutoLogout")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsSetLimitOfMaxFailedLoginAttemps")
+                        .HasColumnType("boolean");
+
+                    b.Property<int?>("MaxNumbersOfFailedLoginAttemps")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("SecToAutoLogout")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SecuritySettings");
+                });
+
             modelBuilder.Entity("Cyberbezpieczenstwo.Data.Models.UsedPassword", b =>
                 {
                     b.Property<int>("Id")
@@ -95,6 +146,9 @@ namespace Cyberbezpieczenstwo.Data.Migrations
                     b.Property<DateTime?>("ExpirationTime")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<bool>("HasOneUsePassword")
+                        .HasColumnType("boolean");
+
                     b.Property<bool>("IsBlocked")
                         .HasColumnType("boolean");
 
@@ -102,11 +156,17 @@ namespace Cyberbezpieczenstwo.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("OneUsePassword")
+                        .HasColumnType("text");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Role")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("X")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -117,9 +177,10 @@ namespace Cyberbezpieczenstwo.Data.Migrations
                         new
                         {
                             Id = 1,
+                            HasOneUsePassword = false,
                             IsBlocked = false,
                             Login = "ADMIN",
-                            Password = "password",
+                            Password = "AKCR1THZKROiOzsL/LhA4tIrT/+uRESeOtapnWAtMedABbbYt/WGZDbFtUXX7IHfxg==",
                             Role = 0
                         });
                 });

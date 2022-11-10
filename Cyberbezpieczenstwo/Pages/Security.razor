@@ -16,4 +16,26 @@
     <InputCheckbox @bind-Value="Model.Third" />
     <label class="me-2">Co najmniej jeden znak specjalny</label>
     <button type="submit" class="btn btn-primary">Zapisz</button>
+
+</EditForm>
+<EditForm Model="@Model2" OnValidSubmit="Submit2">
+    <label class="me-2">Czy powinno blokować konto po przekroczeniu liczby dozwolonych logowań w przeciągu 15min?</label>
+    <InputCheckbox checked="@Model2.IsActive" @bind-Value="Model2.IsActive" />
+    
+    <label>MaxLiczba logowań:</label>
+    <InputNumber @bind-Value="@Model2.MaxNumber" placeholder="MaxNumber" />
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+
+</EditForm>
+
+<EditForm Model="@Model3" OnValidSubmit="Submit3">
+    <label class="me-2">Czy ma wylogowywać po nieaktywności?</label>
+    <InputCheckbox checked="@Model3.IsSetAutoLogout" @bind-Value="Model3.IsSetAutoLogout" />
+
+    <label>Po jakim czasie w sec</label>
+    <InputNumber @bind-Value="@Model3.SecToAutoLogout" placeholder="MaxNumber" />
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+
 </EditForm>

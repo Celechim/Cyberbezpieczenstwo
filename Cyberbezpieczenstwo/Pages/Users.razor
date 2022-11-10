@@ -1,7 +1,6 @@
 ﻿@page "/uzytkownicy"
 @attribute [Authorize(Roles = "Administrator")]
 
-<AuthorizeView Roles="Administrator">
     <PageTitle>Użytkownicy</PageTitle>
 
     <h1>Użytkownicy</h1>
@@ -37,6 +36,3 @@
     }
 
     <button @onclick="Redirect" class="btn btn-primary">Dodaj użytkownika</button>
-
-
-</AuthorizeView>

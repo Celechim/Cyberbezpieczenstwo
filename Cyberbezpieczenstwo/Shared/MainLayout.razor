@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
-
+@inject IJSRuntime js
+@inject NavigationManager navManager
+@inject AuthenticationStateProvider AuthStateProvider
 <PageTitle>Cyberbezpieczenstwo</PageTitle>
 
 <CascadingAuthenticationState>
@@ -15,7 +17,9 @@
 
                 <main>
                     <div class="top-row px-4 auth">
+                        <CascadingValue Value="@Auth">
                         <LoginDisplay />
+                        </CascadingValue>
                         <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
                     </div>
 
@@ -27,4 +31,5 @@
         </Authorized>
     </AuthorizeView>
 </CascadingAuthenticationState>
+
 
