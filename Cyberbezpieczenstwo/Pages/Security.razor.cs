@@ -35,9 +35,16 @@ public partial class Security
         public int SecToAutoLogout { get; set; }
     }
 
+    private class Captchas
+    {
+        public bool Captcha { get; set; }
+        public bool ReCaptcha { get; set; }
+    }
+
     private PasswordLimitations Model = new PasswordLimitations();
     private LoginLimitation Model2 = new LoginLimitation();
     private AutoLogout Model3 = new AutoLogout();
+    private Captchas Model4 = new Captchas();
 
     protected override async Task OnInitializedAsync()
     {
@@ -51,6 +58,8 @@ public partial class Security
         Model2.MaxNumber = Settings.First().MaxNumbersOfFailedLoginAttemps is null ? 0 : (int)Settings.First().MaxNumbersOfFailedLoginAttemps;
         Model3.IsSetAutoLogout = Settings.First().IsSetAutoLogout;
         Model3.SecToAutoLogout = Settings.First().SecToAutoLogout is null ? 0 : (int)Settings.First().SecToAutoLogout;
+        Model4.Captcha = Settings.First().CaptchaEnabled;
+        Model4.ReCaptcha = Settings.First().ReCaptchaEnabled;
     }
 
     private async Task Submit()
@@ -91,6 +100,21 @@ public partial class Security
         await js.InvokeVoidAsync("alert", "Zapisano ustawienia automatycznego wylogowania");
         return;
     }
+
+    private async Task Submit4()
+    {
+        var newSec = new SecuritySettingsDTO
+        {
+            Id = 0,
+            CaptchaEnabled = Model4.Captcha,
+            ReCaptchaEnabled = Model4.ReCaptcha
+        };
+
+        await _securitySettingsController.Update(newSec);
+        await js.InvokeVoidAsync("alert", "Zapisano ustawienia captcha");
+        return;
+    }
+
     public async Task SendLog(string login, string desc, bool status)
     {
         var dto = new LogHistoryDTO();

@@ -18,6 +18,19 @@
                     <label>Password</label>
                     <InputText type="password" @bind-Value="@model.Password" class="form-control" placeholder="Password" />
                 </div>
+                @if (captchaEnabled)
+                {
+                    <div class="mb-3">
+                        <label>@question</label>
+                        <i class="fa-solid fa-arrows-rotate" @onclick="RollQuestion"></i>
+                        <InputText @bind-Value="@model.Answer" class="form-control" placeholder="Answer" />
+                    </div>
+                }
+                <div id="recaptcha" style="@style"></div>
+                @if (wrongCaptcha)
+                {
+                    <p style="color: red">Weryfikacja nie powiodła się</p>
+                }
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Zaloguj</button>
                 </div>

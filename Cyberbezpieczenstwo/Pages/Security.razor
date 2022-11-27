@@ -39,3 +39,14 @@
     <button type="submit" class="btn btn-primary">Zapisz</button>
 
 </EditForm>
+
+<EditForm Model="@Model4" OnValidSubmit="Submit4">
+    <label class="me-2">Captcha</label>
+    <InputCheckbox checked="@Model4.Captcha" @bind-Value="Model4.Captcha" />
+
+    <label>ReCaptcha</label>
+    <InputCheckbox checked="@Model4.ReCaptcha" @bind-Value="Model4.ReCaptcha" />
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+
+</EditForm>

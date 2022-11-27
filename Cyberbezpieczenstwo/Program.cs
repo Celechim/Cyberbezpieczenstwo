@@ -45,6 +45,7 @@ builder.Services.AddSingleton<LogHistoryController>();
 builder.Services.AddSingleton<PasswordLimitationController>();
 builder.Services.AddSingleton<SecuritySettingsController>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+builder.Services.AddTransient<GooglereCaptchaService>();
 
 builder.Services.Configure<ServiceConfig>(config =>
 {

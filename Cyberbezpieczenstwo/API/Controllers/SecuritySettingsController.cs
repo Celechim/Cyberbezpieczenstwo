@@ -33,7 +33,9 @@ namespace Cyberbezpieczenstwo.API.Controllers
                     isSetLimitOfMaxFailedLoginAttemps:options.IsSetLimitOfMaxFailedLoginAttemps,
                     maxNumbersOfFailedLoginAttemps:options.MaxNumbersOfFailedLoginAttemps,
                     isSetAutoLogout: options.IsSetAutoLogout,
-                    secToAutoLogout: options.SecToAutoLogout
+                    secToAutoLogout: options.SecToAutoLogout,
+                    captchaEnabled: options.CaptchaEnabled,
+                    reCaptchaEnabled: options.ReCaptchaEnabled
                     
                 )).ToList();
             return SecurityList;
@@ -47,6 +49,8 @@ namespace Cyberbezpieczenstwo.API.Controllers
             securityToUpdate.MaxNumbersOfFailedLoginAttemps = request.MaxNumbersOfFailedLoginAttemps;
             securityToUpdate.IsSetAutoLogout = request.IsSetAutoLogout;
             securityToUpdate.SecToAutoLogout = request.SecToAutoLogout;
+            securityToUpdate.CaptchaEnabled = request.CaptchaEnabled;
+            securityToUpdate.ReCaptchaEnabled = request.ReCaptchaEnabled;
 
             await _repository.UpdateAsync(securityToUpdate);
             return Ok();

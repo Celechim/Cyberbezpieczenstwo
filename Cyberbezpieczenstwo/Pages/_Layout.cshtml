@@ -12,7 +12,7 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="Cyberbezpieczenstwo.styles.css" rel="stylesheet" />
     <script src="~/js/site.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
@@ -30,6 +30,23 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfrhwAjAAAAAJK-4l7STjlLnegbpvkZ0UMvcjS-"></script>
+    @*<script>
+        runCaptcha = function (actionName) {
+            return new Promise((resolve, reject) => {
+                grecaptcha.enterprise.ready(() => {
+                    grecaptcha.enterprise.execute('6Lc9bL8aAAAAAKWWoY07Tidrhbq4ca6uxI-EpB3i', { action: 'login' }).then(function (token) {
+                        resolve(token);
+                    });
+                });
+            });
+        };
+    </script>*@
+    @*<script>grecaptcha.enterprise.ready(function () {
+            grecaptcha.enterprise.execute('6LeNAAAjAAAAANVCRcSySS1adlU9ro5xuUghWbm5', { action: 'login' }).then(function (token) {
+           ...
+        });
+    });</script>*@
 </body>
 </html>
 
