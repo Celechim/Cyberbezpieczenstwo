@@ -1,0 +1,201 @@
+﻿@page "/file"
+@using Blazored.FluentValidation
+<h1>Files Manager</h1>
+<PageTitle>FileManager</PageTitle>
+
+@if (demowere)
+{
+    <p>
+        <label>
+            You are on Demoware license. With this license you cannot see or download files bigger than 100KB
+        </label>
+        <label>
+            To get full license enter your LicenseKey(Your login codded in Cezar's encryption +3)
+            <br>
+            <input type="text" @bind="@licenseKey" /> 
+            <button @onclick="UpdateLicense">
+                UpdateLicense
+            </button>
+            
+        </label>
+        <p>@errorMessage</p>
+        
+    </p>
+    <p>
+        <label>
+            Max file size 100KB:
+        </label>
+    </p>
+    <p>
+        <label>
+            Upload up to file:
+            <InputFile OnChange="@LoadFiles" multiple />
+        </label>
+    </p>
+    @if (isLoading)
+    {
+        
+        @if (generateError)
+        {
+            <p>File is Too Big!</p>
+        }
+        else
+        {
+            <p>Upload File...</p>
+        }
+    }
+    else
+    {
+        <ul>
+            @foreach (var file in loadedFiles)
+            {
+                <li>
+                    <ul>
+                        <li>Plik został dodany</li>
+                        <li>Name: @file.Name</li>
+                        <li>Last modified: @file.LastModified.ToString()</li>
+                        <li>Size (bytes): @file.Size</li>
+                        <li>Content type: @file.ContentType</li>
+                    </ul>
+                </li>
+            }
+        </ul>
+    }
+    <button @onclick="GetFiles">
+        GetFiles
+    </button>
+    @if (filesLoaded)
+    {
+        <p>First click on button to load Files...</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var file in fileEntries)
+            {
+                <li>
+                    <ul>
+                        <li>
+                            Name: @file.Name
+                        </li>
+                        <li>
+                            FileSize: @Math.Round(@Decimal.Divide(@file.Length, 1024), 2) KB
+
+                        </li>
+                        <li>
+                            @if(@Math.Round(@Decimal.Divide(@file.Length, 1024), 2)>100)
+                            {
+                                <p>File is too big for your license</p>
+                            }
+                            else
+                            {
+                                @if(file.Extension!=".pdf")
+                                {
+                                    <p>Cannot preview files other than pdf</p>
+                                }
+                                else
+                                {
+                                    <a href="File/File/@file.Name" target="_blank">
+                                    Open
+                                    </a>
+                                }
+                            <a href="/Download/@file.Name" target="_blank">
+                                Download
+                            </a>
+                            }
+                            @*<button @onclick="@(e => DownloadFileFromStream(file.Name))">
+                            Download File From Stream
+                            </button>*@
+                        </li>
+                    </ul>
+                </li>
+            }
+
+        </ul>
+    }
+}
+else
+{
+    <p>
+        Your License is of limits!
+    </p>
+    <p>
+        <label>
+            Upload up to file:
+            <InputFile OnChange="@LoadFiles" multiple />
+        </label>
+    </p>
+
+
+    @if (isLoading)
+    {
+        <p>Upload File...</p>
+        @if (generateError)
+        {
+            <p>File is Too Big!</p>
+        }
+    }
+    else
+    {
+        <ul>
+            @foreach (var file in loadedFiles)
+            {
+                <li>
+                    <ul>
+                        <li>Name: @file.Name</li>
+                        <li>Last modified: @file.LastModified.ToString()</li>
+                        <li>Size (bytes): @file.Size</li>
+                        <li>Content type: @file.ContentType</li>
+                    </ul>
+                </li>
+            }
+        </ul>
+    }
+
+    <button @onclick="GetFiles">
+        GetFiles
+    </button>
+    @if (filesLoaded)
+    {
+        <p>First click on button to load Files...</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var file in fileEntries)
+            {
+                <li>
+                    <ul>
+                        <li>
+                            Name: @file.Name
+                        </li>
+                        <li>
+                            FileSize: @Math.Round(@Decimal.Divide(@file.Length, 1024), 2) KB
+
+                        </li>
+                        <li>
+
+                            @if(file.Extension!=".pdf")
+                                {
+                                    <p>Cannot preview files other than pdf</p>
+                                }
+                                else
+                                {
+                                    <a href="File/File/@file.Name" target="_blank">
+                                    Open
+                                    </a>
+                                }
+                            <a href="/Download/@file.Name" target="_blank">
+                                Download
+                            </a>
+                            @*<button @onclick="@(e => DownloadFileFromStream(file.Name))">
+                                Download File From Stream
+                                </button>*@
+                        </li>
+                    </ul>
+                </li>
+            }
+
+        </ul>
+    }
+}

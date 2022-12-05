@@ -221,5 +221,10 @@ public partial class Login
         question = captcha.Question;
         answer = captcha.Answer;
     }
+
+    internal string GetLogin()
+    {
+        throw new NotImplementedException();
+    }
 }
 

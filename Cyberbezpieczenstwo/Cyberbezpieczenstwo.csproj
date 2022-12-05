@@ -66,6 +66,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Development\unsafe_uploads\" />
     <Folder Include="SharedKernel\" />
     <Folder Include="SharedKernel\Interfaces\" />
     <Folder Include="SharedKernel\Enums\" />

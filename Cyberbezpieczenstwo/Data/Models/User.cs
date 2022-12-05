@@ -13,6 +13,7 @@ public class User : EntityBase, IAggregateRoot
 	public bool IsBlocked { get; set; }
 	public bool HasOneUsePassword { get; set; }
 	public string? OneUsePassword { get; set; }
+	public bool Demoware { get; set; }
 	public int? X { get; set; }
 	public virtual ICollection<UsedPassword>? UsedPasswords { get; set; }
 
@@ -27,6 +28,7 @@ public class User : EntityBase, IAggregateRoot
 		HasOneUsePassword = hasOneUsePassword;
 		OneUsePassword = oneUsePassword;
 		X = x;
+		Demoware = true;
     }
 
 	public User()

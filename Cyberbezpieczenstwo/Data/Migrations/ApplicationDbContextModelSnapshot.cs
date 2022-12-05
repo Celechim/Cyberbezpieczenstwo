@@ -149,6 +149,9 @@ namespace Cyberbezpieczenstwo.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Demoware")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTime?>("ExpirationTime")
                         .HasColumnType("timestamp with time zone");
 
@@ -183,6 +186,7 @@ namespace Cyberbezpieczenstwo.Data.Migrations
                         new
                         {
                             Id = 1,
+                            Demoware = false,
                             HasOneUsePassword = false,
                             IsBlocked = false,
                             Login = "ADMIN",

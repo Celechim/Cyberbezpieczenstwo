@@ -213,5 +213,25 @@ public class UserController : BaseApiController
 
 		return Ok(userToDelete);
 	}
+    [HttpGet("LicenseUpdate/{login}")]
+    public async Task<ActionResult> UpdateLicense(string login)
+    {
+        var userSpec = new UserByLogin(login);
+        var user = await _repository.FirstOrDefaultAsync(userSpec);
+		if (user != null)
+			user.Demoware = false;
+		else
+			return NoContent();
+        await _repository.UpdateAsync(user);
+
+        return Ok();
+    }
+    [HttpGet("LicenseUpdate/")]
+    public async Task<bool> CheckLicense(string login)
+    {
+        var userSpec = new UserByLogin(login);
+        var user = await _repository.FirstOrDefaultAsync(userSpec);
+        return user.Demoware;
+    }
 }
 

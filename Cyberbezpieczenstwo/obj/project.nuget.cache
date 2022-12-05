@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bHYGUwTlVtB3oEF83YpXJevY4z6/JNFuw2IEVGo90/I8n/1nvemzKxUPJPzPunx14vwyPFmntcSYAY99EGr9Jw==",
+  "dgSpecHash": "P4KInG8FslxXFhMdg4L9lAFFw6B9Q7G2CS7IDEvhK+kviQzcgiVBrR+GyeNfypZ9ftrGUVUAxM2M39y02Th6yg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\source\\repos\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo.csproj",
+  "projectFilePath": "C:\\Cyber\\cyber\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\ardalis.liststartupservices\\1.1.4\\ardalis.liststartupservices.1.1.4.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\ardalis.specification\\6.1.0\\ardalis.specification.6.1.0.nupkg.sha512",

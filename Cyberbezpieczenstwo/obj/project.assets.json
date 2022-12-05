@@ -12240,11 +12240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo.csproj",
+      "projectUniqueName": "C:\\Cyber\\cyber\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo.csproj",
       "projectName": "Cyberbezpieczenstwo",
-      "projectPath": "C:\\Users\\lenovo\\source\\repos\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo.csproj",
+      "projectPath": "C:\\Cyber\\cyber\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lenovo\\source\\repos\\Cyberbezpieczenstwo\\Cyberbezpieczenstwo\\obj\\",
+      "outputPath": "C:\\Cyber\\cyber\\Cyberbezpieczenstwo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
